@@ -39,7 +39,7 @@ class Truck:
         try:
             self.c_p = self.c_p + self.crg.get(ch_cargo)
             self.crg.pop(ch_cargo)
-        finally:
+        except:
             print(f'cargo: "{ch_cargo.upper()}" - not found')
 
     def __str__(self) -> str:
